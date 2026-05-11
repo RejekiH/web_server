@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Lato", sans-serif;
+  
+  --color-batik-brown: #8B4513;
+  --color-batik-gold: #D4AF37;
+  --color-batik-cream: #F5F0E8;
+  --color-batik-maroon: #800020;
+  --color-batik-dark: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-batik-cream text-batik-dark;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-batik-brown;
+  }
+}
+
+@layer utilities {
+  /* Batik Pattern utility */
+  .bg-batik {
+    background-image: radial-gradient(#D4AF37 1px, transparent 0);
+    background-size: 20px 20px;
+    opacity: 0.1;
+  }
+
+  .batik-pattern {
+    background-color: #8B4513;
+    background-image: radial-gradient(#D4AF37 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  .gold-border {
+    @apply border-batik-gold;
+  }
+
+  .batik-border-heavy {
+    border-image: repeating-linear-gradient(45deg, #8B4513, #8B4513 10px, #D4AF37 10px, #D4AF37 20px) 20;
+  }
+}
+
